@@ -37,10 +37,10 @@
   </div>
 </nav>
 
-<main>
+<main class="m-2 p-2 seeMe">
   <h3><span>Currently Playing:</span></h3>
 
-  <ul class="gamesList">
+  <ul class="gamesList" id="currentGames">
     <li>Remnant II</li>
     <li>Rainbow Six Siege</li>
     <li>XDefiant</li>
@@ -48,13 +48,31 @@
     <li>Terraria</li>
   </ul>
 
+  <div class="mb-3">
+
+    <button class="btn btn-dark" id="btn-add-1">+</button>
+    <button class="btn btn-dark" id="btn-remove-1">-</button>
+    <button class="btn btn-dark" id="btn-default-1">Load Default</button>
+    
+  </div>
+
   <h3><span>Want to play:</span></h3>
 
-  <ul class="gamesList">
-    <li><a href="https://store.steampowered.com/app/1245620/ELDEN_RING/" title="Visit the Elden Ring Steam page" target="_blank">Elden Ring</a></li>
-    <li><a href="https://store.steampowered.com/app/753640/Outer_Wilds/" title="Visit the Outer Wilds Steam page" target="_blank">Outer Wilds</a></li>
-    <li><a href="https://store.steampowered.com/app/1492070/Sker_Ritual/" title="Visit the Sker Ritual Steam page" target="_blank">Sker Ritual</a></li>
+  <ul class="gamesList" id = "futureGames">
+    <li>Elden Ring</li>
+    <li>Outer Wilds</li>
+    <li>Sker Ritual</li>
+    <li>No Man's Sky</li>
+    <li>Satisfactory</li>
   </ul>
+
+  <div class="mb-3">
+
+    <button class="btn btn-dark" id="btn-add-2">+</button>
+    <button class="btn btn-dark" id="btn-remove-2">-</button>
+    <button class="btn btn-dark" id="btn-default-2">Load Default</button>
+    
+  </div>
 
 </main>
 

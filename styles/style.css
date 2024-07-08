@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+.seeMe {
+  border: solid 4px black;
+}
+
 a:link {
   color: black;
 }
