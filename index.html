@@ -53,26 +53,26 @@
   <main class="m-2 p-3 seeMe">
     <h3><span>Currently Playing:</span></h3>
 
-    <div class="row row-cols-md-3 g-4" id="container">
+    <div class="row row-cols-md-3 g-4" id="all-cards">
       <!-- Begin Card -->
       <div class="col">
         <div class="card" data-mdb-animation="fadeInUp">
           <div class="card-body">
-            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+            <div id = "title-box-1" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
             <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
             <!--  Note Area -->
 
-            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <div id = "note-box-1" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
             <!-- End Note Area -->
 
             <h5 class="card-text m-2">Tasks:</h5>
 
             <!-- Checklist -->
-            <ul id="checklist">
+            <ul id="checklist-1">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input class="form-check-input" type="checkbox" value="" >
                   <label class="form-check-label">
                     Use buttons to add or remove tasks
                   </label>
@@ -83,8 +83,8 @@
             <!-- End Checklist -->
 
             <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
-              id="addTask">+</button>
-            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+              id="add-task-1" value = "1">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="remove-task-1">-</button>
 
           </div>
         </div>
@@ -94,21 +94,21 @@
       <div class="col">
         <div class="card" data-mdb-animation="fadeInUp">
           <div class="card-body">
-            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+            <div id = "title-box-2" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
             <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
             <!--  Note Area -->
 
-            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <div id = "note-box-2" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
             <!-- End Note Area -->
 
             <h5 class="card-text m-2">Tasks:</h5>
 
             <!-- Checklist -->
-            <ul id="checklist">
+            <ul id="checklist-2">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input class="form-check-input" type="checkbox" value="" >
                   <label class="form-check-label">
                     Use buttons to add or remove tasks
                   </label>
@@ -119,8 +119,8 @@
             <!-- End Checklist -->
 
             <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
-              id="addTask">+</button>
-            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+              id="add-task-2" value = "2">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="remove-task-2">-</button>
 
           </div>
         </div>
@@ -130,21 +130,21 @@
       <div class="col">
         <div class="card" data-mdb-animation="fadeInUp">
           <div class="card-body">
-            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+            <div id = "title-box-3" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
             <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
             <!--  Note Area -->
 
-            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <div id = "note-box-3" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
             <!-- End Note Area -->
 
             <h5 class="card-text m-2">Tasks:</h5>
 
             <!-- Checklist -->
-            <ul id="checklist">
+            <ul id="checklist-3">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input class="form-check-input" type="checkbox" value="" >
                   <label class="form-check-label">
                     Use buttons to add or remove tasks
                   </label>
@@ -155,8 +155,8 @@
             <!-- End Checklist -->
 
             <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
-              id="addTask">+</button>
-            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+              id="add-task-3" value = "3">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="remove-task-3">-</button>
 
           </div>
         </div>
@@ -166,21 +166,21 @@
       <div class="col">
         <div class="card" data-mdb-animation="fadeInUp">
           <div class="card-body">
-            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+            <div id = "title-box-4" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
             <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
             <!--  Note Area -->
 
-            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <div id = "note-box-4" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
             <!-- End Note Area -->
 
             <h5 class="card-text m-2">Tasks:</h5>
 
             <!-- Checklist -->
-            <ul id="checklist">
+            <ul id="checklist-4">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input class="form-check-input" type="checkbox" >
                   <label class="form-check-label">
                     Use buttons to add or remove tasks
                   </label>
@@ -191,8 +191,8 @@
             <!-- End Checklist -->
 
             <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
-              id="addTask">+</button>
-            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+              id="add-task-4" value = 4>+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="remove-task-4">-</button>
 
           </div>
         </div>
@@ -202,21 +202,21 @@
       <div class="col">
         <div class="card" data-mdb-animation="fadeInUp">
           <div class="card-body">
-            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+            <div id = "title-box-5" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
             <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
             <!--  Note Area -->
 
-            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <div id = "note-box-5" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
             <!-- End Note Area -->
 
             <h5 class="card-text m-2">Tasks:</h5>
 
             <!-- Checklist -->
-            <ul id="checklist">
+            <ul id="checklist-5">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input class="form-check-input" type="checkbox" value="" >
                   <label class="form-check-label">
                     Use buttons to add or remove tasks
                   </label>
@@ -227,33 +227,32 @@
             <!-- End Checklist -->
 
             <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
-              id="addTask">+</button>
-            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+              id="add-task-5" value = 5>+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="remove-task-5">-</button>
 
           </div>
         </div>
       </div>
       <!-- End Card -->
       <!-- Add new card below -->
-      <!-- Begin Card -->
       <div class="col">
         <div class="card" data-mdb-animation="fadeInUp">
           <div class="card-body">
-            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+            <div id = "title-box-6" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
             <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
             <!--  Note Area -->
 
-            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <div id = "note-box-6" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
             <!-- End Note Area -->
 
             <h5 class="card-text m-2">Tasks:</h5>
 
             <!-- Checklist -->
-            <ul id="checklist">
+            <ul id="checklist-6">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input class="form-check-input" type="checkbox" value="" >
                   <label class="form-check-label">
                     Use buttons to add or remove tasks
                   </label>
@@ -264,8 +263,8 @@
             <!-- End Checklist -->
 
             <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
-              id="addTask">+</button>
-            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+              id="add-task-6" value = 6>+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="remove-task-6">-</button>
 
           </div>
         </div>
