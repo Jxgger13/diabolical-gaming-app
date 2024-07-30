@@ -1,81 +1,39 @@
-$(document).ready(function () {
-  console.log("Hello World!");
 
-  var currentGames = [ 
-    '<li>Remnant II</li>',
-    '<li>Rainbow Six Siege</li>',
-    '<li>XDefiant</li>',
-    '<li>Pavlov VR</li>',
-    '<li>Terraria</li>'
-  ];
+var tasks = [];
 
-  var futureGames = [
-    '<li>Elden Ring</li>',
-    '<li>Outer Wilds</li>',
-    '<li>Sker Ritual</li>',
-    '<li>No Man\'s Sky</li>',
-    '<li>Satisfactory</li>'
-  ];
 
-  $('#btn-add-1').click(function(){
+// TOGGLE FORM DISPLAY
+function togglePopup() {
+    const overlay = document.getElementById('popupOverlay');
+    overlay.classList.toggle('show');
+};
 
-    console.log("clicked add 1")
-    var name = prompt('Enter the game\'s name')
-    if(name != null){
-      $('#currentGames').append('<li>'+name+'</li>')
-    }
+document.getElementById('task-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let newTask = document.querySelector('#new-task').value;
+    tasks.push(`<div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    ${newTask}
+                  </label>
+                </div>`);
+
+    updateChecklist();    
+    togglePopup();
     
-
-  });
-
-  $('#btn-remove-1').click(function(){
-
-    console.log("clicked remove 1")
-    $('#currentGames li:last-child').remove()
-
-  });
-
-  $('#btn-default-1').click(function(){
-
-    $('#currentGames').empty()
-
-    for(i = 0; i < currentGames.length; i++ ){
-      $('#currentGames').append(currentGames[i])
-    }
-
-  });
-
-  $('#btn-add-2').click(function(){
-    
-    console.log("clicked add 2")
-    var name = prompt('Enter the game\'s name')
-    if(name != null){
-      $('#futureGames').append('<li>'+name+'</li>')
-    }
-    
-
-  });
-
-  $('#btn-remove-2').click(function(){
-
-    console.log("clicked remove 2")
-    $('#futureGames li:last-child').remove()
-
-  });
-
-  $('#btn-default-2').click(function(){
-
-    $('#futureGames').empty()
-
-    for(i = 0; i < futureGames.length; i++ ){
-      $('#futureGames').append(futureGames[i])
-    }
-
-  });
-
 });
 
+function updateChecklist(){
 
+    $('#checklist').empty();
 
+    for(i=0; i < tasks.length; i++){
+        $('#checklist').append(tasks[i]);
+    }
+};
 
-
+$('#removeTask').click(function(){
+    tasks.pop();
+    updateChecklist();
+});

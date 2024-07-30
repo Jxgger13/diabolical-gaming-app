@@ -1,107 +1,316 @@
 <!-- 
   author: Jagger Thurman
-  version: 1.1
+  version: 1.3
   github: Jxgger13
 -->
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
-<link rel="stylesheet" href="styles/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="styles/style.css">
 
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="bi bi-controller"></i> Jagger's Gaming App</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#"><i class="bi bi-graph-up"></i> Progress</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active " href="#"><i class="bi bi-list"></i> Wishlist</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="https://github.com/Jxgger13/diabolical-gaming-app" target = "_blank"><i class="bi bi-github"></i> Source Code</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active " href="pages/about.html"><i class="bi bi-person"></i> About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active " href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjxgger13.github.io%2Fdiabolical-gaming-app%2F" target = "_blank">
-            <i class="bi bi-check2-square"></i> Validator</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-controller"></i> Jagger's Gaming App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " href="pages/wishlist.html"><i class="bi bi-list"></i> Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="https://github.com/Jxgger13/diabolical-gaming-app" target="_blank"><i
+                class="bi bi-github"></i> Source Code</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " href="pages/about.html"><i class="bi bi-person"></i> About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active "
+              href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjxgger13.github.io%2Fdiabolical-gaming-app%2F"
+              target="_blank">
+              <i class="bi bi-check2-square"></i> Validator</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="m-2 p-2 seeMe">
-  <h3><span>Currently Playing:</span></h3>
+  <main class="m-2 p-3 seeMe">
+    <h3><span>Currently Playing:</span></h3>
 
-  <ul class="gamesList" id="currentGames">
-    <li>Remnant II</li>
-    <li>Rainbow Six Siege</li>
-    <li>XDefiant</li>
-    <li>Pavlov VR</li>
-    <li>Terraria</li>
-  </ul>
+    <div class="row row-cols-md-3 g-4" id="container">
+      <!-- Begin Card -->
+      <div class="col">
+        <div class="card" data-mdb-animation="fadeInUp">
+          <div class="card-body">
+            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
-  <div class="mb-3">
+            <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
+            <!--  Note Area -->
 
-    <button class="btn btn-dark" id="btn-add-1">+</button>
-    <button class="btn btn-dark" id="btn-remove-1">-</button>
-    <button class="btn btn-dark" id="btn-default-1">Load Default</button>
-    
-  </div>
+            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <!-- End Note Area -->
 
-  <h3><span>Want to play:</span></h3>
+            <h5 class="card-text m-2">Tasks:</h5>
 
-  <ul class="gamesList" id = "futureGames">
-    <li>Elden Ring</li>
-    <li>Outer Wilds</li>
-    <li>Sker Ritual</li>
-    <li>No Man's Sky</li>
-    <li>Satisfactory</li>
-  </ul>
+            <!-- Checklist -->
+            <ul id="checklist">
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label">
+                    Use buttons to add or remove tasks
+                  </label>
+                </div>
+              </li>
 
-  <div class="mb-3">
+            </ul>
+            <!-- End Checklist -->
 
-    <button class="btn btn-dark" id="btn-add-2">+</button>
-    <button class="btn btn-dark" id="btn-remove-2">-</button>
-    <button class="btn btn-dark" id="btn-default-2">Load Default</button>
-    
-  </div>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
+              id="addTask">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
 
-</main>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+      <!-- Add new card below -->
+      <div class="col">
+        <div class="card" data-mdb-animation="fadeInUp">
+          <div class="card-body">
+            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
 
-<footer class="bg-body-tertiary text-center text-lg-start fixed-bottom">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024:
-    <a class="text-body" href="https://github.com/Jxgger13" target="github">jt@github</a>
-    <a class="text-body">|</a>
-    <a class="text-body" href="README.md" target="_blank">readme</a>
-  </div>
- 
-</footer>
-<!-- scripts go here -->
+            <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
+            <!--  Note Area -->
+
+            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <!-- End Note Area -->
+
+            <h5 class="card-text m-2">Tasks:</h5>
+
+            <!-- Checklist -->
+            <ul id="checklist">
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label">
+                    Use buttons to add or remove tasks
+                  </label>
+                </div>
+              </li>
+
+            </ul>
+            <!-- End Checklist -->
+
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
+              id="addTask">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+      <!-- Add new card below -->
+      <div class="col">
+        <div class="card" data-mdb-animation="fadeInUp">
+          <div class="card-body">
+            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+
+            <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
+            <!--  Note Area -->
+
+            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <!-- End Note Area -->
+
+            <h5 class="card-text m-2">Tasks:</h5>
+
+            <!-- Checklist -->
+            <ul id="checklist">
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label">
+                    Use buttons to add or remove tasks
+                  </label>
+                </div>
+              </li>
+
+            </ul>
+            <!-- End Checklist -->
+
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
+              id="addTask">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+      <!-- Add new card below -->
+      <div class="col">
+        <div class="card" data-mdb-animation="fadeInUp">
+          <div class="card-body">
+            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+
+            <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
+            <!--  Note Area -->
+
+            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <!-- End Note Area -->
+
+            <h5 class="card-text m-2">Tasks:</h5>
+
+            <!-- Checklist -->
+            <ul id="checklist">
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label">
+                    Use buttons to add or remove tasks
+                  </label>
+                </div>
+              </li>
+
+            </ul>
+            <!-- End Checklist -->
+
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
+              id="addTask">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+      <!-- Add new card below -->
+      <div class="col">
+        <div class="card" data-mdb-animation="fadeInUp">
+          <div class="card-body">
+            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+
+            <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
+            <!--  Note Area -->
+
+            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <!-- End Note Area -->
+
+            <h5 class="card-text m-2">Tasks:</h5>
+
+            <!-- Checklist -->
+            <ul id="checklist">
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label">
+                    Use buttons to add or remove tasks
+                  </label>
+                </div>
+              </li>
+
+            </ul>
+            <!-- End Checklist -->
+
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
+              id="addTask">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+      <!-- Add new card below -->
+      <!-- Begin Card -->
+      <div class="col">
+        <div class="card" data-mdb-animation="fadeInUp">
+          <div class="card-body">
+            <div id = "title-box" class="card-title text-center border p-2" contenteditable spellcheck="false">Insert Title</div>
+
+            <h5 class="card-text m-2">Notes: <i class="bi bi-pencil-square"></i></h5>
+            <!--  Note Area -->
+
+            <div id = "note-box" class="card-text text-center border p-2" contenteditable spellcheck="false">Add Notes</div>
+            <!-- End Note Area -->
+
+            <h5 class="card-text m-2">Tasks:</h5>
+
+            <!-- Checklist -->
+            <ul id="checklist">
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label">
+                    Use buttons to add or remove tasks
+                  </label>
+                </div>
+              </li>
+
+            </ul>
+            <!-- End Checklist -->
+
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " onclick="togglePopup()"
+              id="addTask">+</button>
+            <button class=" btn-open-popupbtn-sm btn-primary m-1 text-dark " id="removeTask">-</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+      <!-- Add new card below -->
+    </div>
+    </div>
+
+    <div id="popupOverlay" class="overlay-container">
+      <div class="popup-box">
+        <h2 style="color: green;">New Task</h2>
+        <form class="form-container" id="task-form">
+          <input class="form-input" type="text" placeholder="insert task" id="new-task" required>
+
+          <button class="btn-submit" type="submit">
+            Submit
+          </button>
+        </form>
+
+        <button class="btn-close-popup" onclick="togglePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer class="bg-body-tertiary text-center text-lg-start fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024:
+      <a class="text-body" href="https://github.com/Jxgger13" target="github">jt@github</a>
+      <a class="text-body">|</a>
+      <a class="text-body" href="README.md" target="_blank">readme</a>
+    </div>
+
+  </footer>
+  <!-- scripts go here -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
-<script  src="scripts/game-script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+  <script src="scripts/game-script.js"></script>
 
 </body>
-</html>
 
+</html>
